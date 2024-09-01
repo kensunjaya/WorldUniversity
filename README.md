@@ -1,8 +1,28 @@
-# React + Vite
+# World University
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WorldUniversity is an innovative platform specifically designed to help students explore the world. Here, you can find comprehensive information about various countries around the globe, ranging from basic data to in-depth details that can help you better understand each country.
 
-Currently, two official plugins are available:
+## Prerequisites
+<li>Node.js version 18+</li>
+<li>Browser</li>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Clone this repository, then enter the directory (require Git)
+```
+git clone https://github.com/kensunjaya/WorldUniversity.git
+cd WorldUniversity
+```
+
+### Install all required depedencies
+```
+npm install
+```
+
+### Running the website locally
+```
+npm run dev
+```
+#### The website will automatically run on localhost port `5173` if it is not currently used by any process
+Alternatively, click the url that is displayed on terminal
+<br />
+<br />
+<a href="https://world-university-seven.vercel.app/" target="_blank">Visit vercel deployment</a>
