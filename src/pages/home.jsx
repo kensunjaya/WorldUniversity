@@ -3,11 +3,19 @@ import { NavBar } from '../components/navbar'
 import axios from "axios";
 import { DataContext } from '../context/Context';
 import { Loading } from '../components/loading';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  const {popularCountries, setPopularCountries} = useContext(DataContext);
+  const { popularCountries, setPopularCountries, setSelectedCountry } = useContext(DataContext);
   const [countries, setCountries] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleCountryClick = (country) => {
+    setSelectedCountry(country);
+    navigate("/details");
+  }
   
   useEffect(() => {
     if (popularCountries.length > 0) {
@@ -41,10 +49,10 @@ const Home = () => {
         <div className="flex flex-wrap justify-center items-center mt-10">
           {countries.map((country, index) => {
             return (
-              <div key={index} className='mx-5 my-5'>
+              <button key={index} className='mx-5 my-5' onClick={() => handleCountryClick(country.name.common)}>
                 <img src={country.flags.png} alt={country.name.common} />
                 <div className="text-center text-xl font-semibold mt-3">{country.name.common}</div>
-              </div>
+              </button>
             )
           })}
         </div>

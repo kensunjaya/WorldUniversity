@@ -29,7 +29,7 @@ const Filter = () => {
     }).finally(() => {
       setIsLoading(false);
     });
-  }, []);
+  }, [allCountries]);
 
 
   const handleCountryClick = (country) => {
